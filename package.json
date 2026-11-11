@@ -1,0 +1,35 @@
+{
+  "name": "purplbot",
+  "version": "1.0.0",
+  "description": "PurplBot - A Telegram bot that receives zipped CSV files from Purpl Pro cannabis analyzers and returns professional analysis reports with thermal printing",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:start:prod": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop PurplBot",
+    "pm2:restart": "pm2 restart PurplBot",
+    "pm2:delete": "pm2 delete PurplBot",
+    "pm2:logs": "pm2 logs PurplBot",
+    "pm2:status": "pm2 status",
+    "pm2:monit": "pm2 monit"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3",
+    "yauzl": "^3.4.0",
+    "csv-parser": "^3.2.1",
+    "cli-table3": "^0.6.5",
+    "dotenv": "^18.0.10",
+    "canvas": "^3.2.3",
+    "sharp": "^0.35.5",
+    "node-thermal-printer": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "pm2": "^7.1.2"
+  },
+  "keywords": ["telegram", "bot", "csv", "ascii", "table"],
+  "author": "",
+  "license": "MIT"
+} 
